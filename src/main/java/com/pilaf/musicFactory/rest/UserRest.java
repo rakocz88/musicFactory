@@ -5,14 +5,14 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-import com.pilaf.musicFactory.biz.TestBiz;
+import com.pilaf.musicFactory.biz.UserBiz;
 import com.pilaf.musicFactory.model.User;
 
 @Path("/music")
-public class Test {
+public class UserRest {
 	
 	@Inject
-	private TestBiz testBIz;
+	private UserBiz testBIz;
 	
 	@GET
 	@Path("/helloworld")
@@ -20,12 +20,8 @@ public class Test {
 		User user = new User();
 		user.setLogin("Buba");
 		user.setPassword("Wal");
-		
-		
-		
-		
 		String value = "Hello World";
-		testBIz.doTest(user);
+		testBIz.createUser(user);
 		
 		
 		return Response.status(200).entity(value).build();
