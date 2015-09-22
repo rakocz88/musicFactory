@@ -38,7 +38,7 @@
 				<version>8.0.0.Final</version>
 				<scope>import</scope>
 			</dependency>
-		
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -57,7 +57,7 @@
 			<version>3.0.6.Final</version>
 			<scope>provided</scope>
 		</dependency>
-	
+
 
 		<!-- Hibernate ORM sub-modules -->
 		<dependency>
@@ -67,9 +67,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-    <groupId>javax</groupId>
-    <artifactId>javaee-api</artifactId>
-	<version>7.0</version>
-</dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+		</dependency>
 	</dependencies>
 </project>
