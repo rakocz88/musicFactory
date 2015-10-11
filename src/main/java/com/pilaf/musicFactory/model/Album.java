@@ -36,8 +36,7 @@ public class Album implements MusicFactoryModel {
 	private int songAmount;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = BAND_ID_KEY)
-	@Column(nullable = false, unique = false)
+	@JoinColumn(name = BAND_ID_KEY, nullable = false, unique = false)
 	private Band band;
 
 	// GETTERS AND SETTERS

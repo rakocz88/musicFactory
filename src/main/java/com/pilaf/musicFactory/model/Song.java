@@ -6,8 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = Song.SONG_TABLE_NAME)
 public class Song implements MusicFactoryModel {
 
 	public static final String SONG_TABLE_NAME = "mf_song";
