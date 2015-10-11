@@ -6,12 +6,6 @@ import javax.jms.Queue;
 
 public abstract class BaseBiz {
 	
-	@Resource(mappedName = "ConnectionFactory")
-	protected ConnectionFactory factory;
-	
-	@Resource(mappedName = "Queue")
-	protected Queue queue;
-	
 	
 	
 	

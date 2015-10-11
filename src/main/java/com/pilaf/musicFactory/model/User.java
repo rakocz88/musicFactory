@@ -1,13 +1,12 @@
 package com.pilaf.musicFactory.model;
 
-import java.io.Serializable;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class User implements Serializable {
+public class User implements MusicFactoryModel {
 
 	/**
 	 * 
@@ -20,6 +19,7 @@ public class User implements Serializable {
 
 	String login;
 
+	@Column(name = "mpassword")
 	String password;
 
 	public String getLogin() {
