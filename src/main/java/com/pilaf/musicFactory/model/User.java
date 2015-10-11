@@ -4,15 +4,17 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = User.USER_TABLE_NAME)
 public class User implements MusicFactoryModel {
 
 	public static final String USER_TABLE_NAME = "mf_user";
 	public static final String ID_KEY = "id";
 	public static final String LOGIN_KEY = "login";
 	public static final String PASSWORD_KEY = "mf_password";
-	private static final long serialVersionUID = -3678093127003595593L;
+	private static final long serialVersionUID = 1;
 
 	@Id
 	@GeneratedValue

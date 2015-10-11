@@ -41,11 +41,7 @@
 
 		</dependencies>
 	</dependencyManagement>
-
-
 	<dependencies>
-
-
 		<dependency>
 			<artifactId>musicFactory-DAO</artifactId>
 			<groupId>musicFactory</groupId>
@@ -57,9 +53,6 @@
 			<version>3.0.6.Final</version>
 			<scope>provided</scope>
 		</dependency>
-
-
-		<!-- Hibernate ORM sub-modules -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>

@@ -10,20 +10,19 @@ import com.pilaf.musicFactory.model.User;
 
 @Path("/music")
 public class UserRest {
-	
+
 	@Inject
 	private UserBiz testBIz;
-	
+
 	@GET
 	@Path("/helloworld")
 	public Response getHelloWorld() {
 		User user = new User();
-		user.setLogin("Buba");
+		user.setLogin("Buba3");
 		user.setPassword("Wal");
 		String value = "Hello World";
-		testBIz.createUser(user);
-		
-		
+		testBIz.create(user);
+
 		return Response.status(200).entity(value).build();
 	}
 

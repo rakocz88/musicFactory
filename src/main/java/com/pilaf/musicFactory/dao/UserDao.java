@@ -4,11 +4,9 @@ import javax.ejb.Stateless;
 
 import com.pilaf.musicFactory.model.User;
 
-@Stateless
-public class UserDao extends BaseDao {
+@Stateless(name = "UserDao")
+public class UserDao extends BaseDao<User> {
 
-	public void createUser(User user) {
-		getEm().persist(user);
-	}
+	private static final long serialVersionUID = 1L;
 
 }
