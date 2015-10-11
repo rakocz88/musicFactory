@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +27,7 @@ public class Band implements MusicFactoryModel {
 	public static final String PERSON_BAND_TABLE = "mf_per_band";
 	public static final String PERSON_JOIN_KEY = "person_id";
 	public static final String BAND_JOIN_KEY = "band_id";
+	public static final String ALBUMS_KEY = "album_List";
 
 	@Id
 	@GeneratedValue
@@ -44,6 +46,10 @@ public class Band implements MusicFactoryModel {
 	@ManyToMany
 	@JoinTable(name = PERSON_BAND_TABLE, joinColumns = { @JoinColumn(name = PERSON_JOIN_KEY) }, inverseJoinColumns = { @JoinColumn(name = BAND_JOIN_KEY) })
 	private List<Person> personList;
+
+	@OneToMany
+	@JoinColumn(name = ALBUMS_KEY, nullable = true)
+	private List<Album> albumList;
 
 	// ==========GETTERS AND SETTERS
 	public long getId() {
@@ -84,6 +90,14 @@ public class Band implements MusicFactoryModel {
 
 	public void setPersonList(List<Person> personList) {
 		this.personList = personList;
+	}
+
+	public List<Album> getAlbumList() {
+		return albumList;
+	}
+
+	public void setAlbumList(List<Album> albumList) {
+		this.albumList = albumList;
 	}
 
 }
