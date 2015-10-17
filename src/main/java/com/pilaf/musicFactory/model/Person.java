@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import com.pilaf.musicFactory.annotation.Describe;
+import com.pilaf.musicFactory.annotation.Describe.Priority;
+
 @Entity
 @Table(name = Person.PERSON_TABLE_NAME)
 public class Person implements MusicFactoryModel {
@@ -24,9 +27,11 @@ public class Person implements MusicFactoryModel {
 
 	@Id
 	@GeneratedValue
+	@Describe(createdBy = "Filip", enabled = true, priority = Priority.LOW)
 	@Column(name = ID_KEY, nullable = false, unique = true)
 	private long id;
 
+	@Describe(createdBy = "Filip jest fajny", enabled = false, priority = Priority.HIGH)
 	@Column(name = FIRSTNAME_KEY, nullable = false, unique = false)
 	private String firstname;
 
